@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .profile-card {
+            width: 150px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+        }
+        .absent {
+            border-color: red;
+        }
+        .present {
+            border-color: green;
+        }
+        .student {
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Group No.</h1>
+        <div class="row mt-4">
+            <div class="col">
+                <h2>Students <span class="badge badge-primary">3</span></h2>
+                <div class="d-flex flex-wrap">
+                    <div class="profile-card student">
+                        <p>John Doe</p>
+                        <p>STU201001</p>
+                        <button class="btn btn-primary">Action</button>
+                    </div>
+                    <div class="profile-card student">
+                        <p>Jane Smith</p>
+                        <p>STU201002</p>
+                        <button class="btn btn-primary">Action</button>
+                    </div>
+                    <div class="profile-card student">
+                        <p>Michael Brown</p>
+                        <p>STU201003</p>
+                        <button class="btn btn-primary">Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <h2>Present <span class="badge badge-success">3</span></h2>
+                <div class="d-flex flex-wrap">
+                    <div class="profile-card present">
+                        <p>Chris Johnson</p>
+                        <p>STU202605</p>
+                        <button class="btn btn-success">Action</button>
+                    </div>
+                    <div class="profile-card present">
+                        <p>David Clark</p>
+                        <p>STU202607</p>
+                        <button class="btn btn-success">Action</button>
+                    </div>
+                    <div class="profile-card present">
+                        <p>Ryan Martinez</p>
+                        <p>STU202609</p>
+                        <button class="btn btn-success">Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <h2>Absent <span class="badge badge-danger">4</span></h2>
+                <div class="d-flex flex-wrap">
+                    <div class="profile-card absent">
+                        <p>Emily Davis</p>
+                        <p>STU202604</p>
+                        <button class="btn btn-danger">Action</button>
+                    </div>
+                    <div class="profile-card absent">
+                        <p>Sarah Lee</p>
+                        <p>STU202606</p>
+                        <button class="btn btn-danger">Action</button>
+                    </div>
+                    <div class="profile-card absent">
+                        <p>Laura Wilson</p>
+                        <p>STU202608</p>
+                        <button class="btn btn-danger">Action</button>
+                    </div>
+                    <div class="profile-card absent">
+                        <p>Alice Taylor</p>
+                        <p>STU202610</p>
+                        <button class="btn btn-danger">Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <button class="btn btn-outline-dark">Search</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

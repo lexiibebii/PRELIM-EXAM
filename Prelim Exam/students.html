@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif; /* Corrected font-family */
+            margin: 0; /* Set margin to 0 */
+            padding: 0; /* Set padding to 0 */
+            display: flex;
+            height: 100vh;
+            background-color: #f4f7fa;
+        }
+
+        .left-panel {
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .right-panel {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .summary-box {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Added margin to separate boxes */
+            text-align: center;
+            color: white;
+        }
+
+        .total-students {
+            background-color: #1E77F5;
+        }
+
+        .total-present {
+            background-color: #4CAF50;
+        }
+
+        .total-absent {
+            background-color: #F44336;
+        }
+
+        .summary-box h2 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .summary-box p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .btn {
+            background-color: white;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        /* Table wrapper */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 20px; /* Margin top for separation from previous content */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        /* Status colors for the table */
+        .present {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .absent {
+            background-color: #F44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="left-panel">
+    <!-- Summary Boxes -->
+    <div class="summary-box total-students">
+        <h2>10</h2>
+        <p>Total Students</p>
+        <a href='#' class="btn">Add Student</a>
+    </div>
+
+    <div class="summary-box total-present">
+        <h2>3</h2>
+        <p>Total Present</p>
+        <a href='#' class="btn">See More...</a>
+    </div>
+
+    <div class="summary-box total-absent">
+        <h2>4</h2>
+        <p>Total Absent</p>
+        <a href='#' class="btn">See More...</a>
+    </div>
+</div>
+
+<div class="right-panel">
+    <!-- Table for Attendance -->
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Student No.</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Gender</th>
+                    <th>Civil Status</th>
+                    <th>Nationality</th>
+                    <th>Date of Birth</th>
+                    <th>Place of Birth</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>STU2025001</td>
+                    <td>John Doe</td>
+                    <td class="present">Present</td>
+                    <td>Male</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>STU2025002</td>
+                    <td>Jane Smith</td>
+                    <td class="absent">Absent</td>
+                    <td>Female</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>STU2025003</td>
+                    <td>Michael Brown</td>
+                    <td class="absent">Absent</td>
+                    <td>Male</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>STU2025004</td>
+                    <td>Emily Davis</td>
+                    <td class="absent">Absent</td>
+                    <td>Female</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>STU2025005</td>
+                    <td>Chris Johnson</td>
+                    <td class="present">Present</td>
+                    <td>Male</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>STU2025006</td>
+                    <td>Sarah Lee</td>
+                    <td class="absent">Absent</td>
+                    <td>Female</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>STU2025007</td>
+                    <td>David Clark</td>
+                    <td class="present">Present</td>
+                    <td>Male</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>STU2025008</td>
+                    <td>Laura Wilson</td>
+                    <td class="absent">Absent</td>
+                    <td>Female</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>STU2025009</td>
+                    <td>Ryan Martinez</td>
+                    <td class="present">Present</td>
+                    <td>Male</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>STU2025010</td>
+                    <td>Alice Taylor</td>
+                    <td class="absent">Absent</td>
+                    <td>Female</td>
+                    <td>Single</td>
+                    <td>Filipino</td>
+                    <td>January 1, 2000</td>
+                    <td>Street, Barangay</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
